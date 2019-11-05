@@ -1,3 +1,13 @@
+#ifndef IntArray_H
+#define IntArray_H
+
+/**
+ * Description: 
+ * 
+ * 
+ * 
+ * 
+ */
 class IntArray
 {
 public:
@@ -26,7 +36,7 @@ public:
     // 否则返回 -1
     virtual int find(int value) const;
 
-private:
+protected:
     // 私有实现代码
     static const int DefaultArraySize = 12;
     void init(int sz, int *array);
@@ -34,3 +44,4 @@ private:
     int _size;
     int *ia;
 };
+#endif

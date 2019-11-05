@@ -108,3 +108,13 @@ void IntArray::init(int sz, int *array)
         }
     }
 }
+
+void IntArray::sort()
+{
+
+}
+
+int IntArray::find(int index) const
+{
+    return -1;
+}
