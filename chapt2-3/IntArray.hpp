@@ -33,4 +33,5 @@ private:
     // 内部数据
     int _size;
     int *ia;
+    void init( int sz, int *array);
 };

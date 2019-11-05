@@ -1,5 +1,5 @@
 #include <iostream>
-#include "chapt2.3.hpp"
+#include "IntArray.hpp"
 
 using namespace std;
 
