@@ -86,11 +86,11 @@ IntArray& IntArray::operator=(const IntArray &lft)
     return *this;
 }
 
-int& IntArray::operator[] (int index)
-{
-    assert( index >= 0 && index < _size);
-    return ia[index];
-}
+// int& IntArray::operator[] (int index)
+// {
+//     assert( index >= 0 && index < _size);
+//     return ia[index];
+// }
 
 void IntArray::init(int sz, int *array)
 {
