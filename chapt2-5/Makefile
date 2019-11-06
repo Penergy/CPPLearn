@@ -10,17 +10,15 @@ objects = *.o
 # ****************************************************
 # Targets needed to bring the executable up to date
 
-main: main.o IntArray.o IntArrayRC.o
-	$(CXX) $(CXXFLAGS) -o main main.o IntArray.o IntArrayRC.o
+main: main.o Array.o
+	$(CXX) $(CXXFLAGS) -o main main.o Array.o
 
 # The main.o target can be written more simply
 
-main.o: main.cpp IntArray.h IntArrayRC.h
+main.o: main.cpp Array.h
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
-Point.o: IntArray.h
-
-Rectangle.o: IntArrayRC.h IntArray.h
+Array.o: Array.h
 
 # *****************************************************
 # Clean Objects
