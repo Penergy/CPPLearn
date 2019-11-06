@@ -1,16 +1,16 @@
 #ifndef __SHAPE_H
 #define __SHAPE_H
-namespace exe212
-{
 class Shape
 {
 public:
-    virtual double getArea();
-    virtual double getGirth();
+    Shape();
+    virtual double getArea() = 0;
+    virtual double getGirth() = 0;
 
-private:
+protected:
     double _area;
     double _girth;
+    bool _isAreaCalculated = false;
+    bool _isGirthCalculated = false;
 };
-} // namespace exe212
 #endif
