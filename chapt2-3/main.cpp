@@ -1,11 +1,10 @@
 #include <iostream>
-#include "IntArray.hpp"
-#include "IntArrayRC.hpp"
+#include "IntArray.h"
+#include "IntArrayRC.h"
 
+extern void swap(IntArray&, int, int);
 
 using namespace std;
-
-class IntArray;
 
 int main()
 {
@@ -53,9 +52,30 @@ int main()
     // cout << "ia3 max = " << max_val_ia3 << endl;
     // cout << "ia3 array_size = " << array_size_ia3 << endl;
 
-    int ia[] = { 0, 1, 1, 2, 3, 5, 8, 13};
-    IntArrayRC iarc(ia, 8);
+    // int ia2[] = { 0, 1, 1, 2, 3, 5, 8, 13};
+    // IntArrayRC iarc(ia2, 8);
+    // int min_val_ia4 = iarc.min();
+    // cout << "iarc min = " << min_val_ia4 << endl;
 
+    int array[4] = {0, 1, 2, 3, };
+    IntArray ia1(array, 4);
+    IntArrayRC ia2(array, 4);
+
+    // 错误：一个偏移(off-by-one), 应该是size-1
+    // IntArray对像捕捉不到这个错误
+    cout << "swap() with IntArray ia1\n";
+    swap(ia1, 1, ia1.size());
+
+    // ok: IntArrayRC对象可以捕捉到这样的错误
+    cout << "swap() with IntArrayRC ia2\n";
+    swap(ia2, 1, ia2.size());
+    
     return 0;
 }
 
+void swap(IntArray &ia, int i, int j)
+{
+    int tmp = ia[i];
+    ia[i] = ia[j];
+    ia[j] = tmp;
+}

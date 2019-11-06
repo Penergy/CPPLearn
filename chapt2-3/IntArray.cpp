@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cassert>
-#include "IntArray.hpp"
+#include "IntArray.h"
 
 IntArray::IntArray(int sz)
 {

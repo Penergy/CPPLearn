@@ -1,10 +1,10 @@
 #include <iostream>
 #include <cassert>
-#include "IntArrayRC.hpp"
+#include "IntArrayRC.h"
 
-inline IntArrayRC::IntArrayRC(int sz): IntArray(sz){}
-
-inline IntArrayRC::IntArrayRC(int *iar, int sz): IntArray(iar, sz){}
+IntArrayRC::IntArrayRC(int sz): IntArray(sz){}
+IntArrayRC::IntArrayRC(int *iar, int sz): IntArray(iar, sz){}
+IntArrayRC::IntArrayRC(const IntArrayRC &rhs): IntArray(rhs){}
 
 inline int& IntArrayRC::operator[](int index)
 {
