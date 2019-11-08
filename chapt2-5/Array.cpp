@@ -95,7 +95,7 @@ template<class T> Array<T>& Array<T>::operator=(const Array &lft)
 template<class T> void Array<T>::init(int sz, T *array)
 {
     _size = sz;
-    ia = new int[ _size ];
+    ia = new T[ _size ];
     for( int ix = 0; ix < _size; ++ix)
     {
         if(!array)
@@ -114,7 +114,13 @@ template<class T> void Array<T>::sort()
 
 }
 
-// template<class T> int Array<T>::find(T value) const
-// {
-//     return -1;
-// }
+template<class T> int Array<T>::find(const T &value) const
+{
+    return -1;
+}
+
+template class Array<int>;
+template class Array<long>;
+template class Array<double>;
+template class Array<float>;
+template class Array<char>;

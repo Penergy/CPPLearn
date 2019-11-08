@@ -8,8 +8,7 @@
  * 
  * 
  */
-template <class T>
-class Array
+template <class T> class Array
 {
 public:
     // 构造函数
