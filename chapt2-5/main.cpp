@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Array.h"
+#include "ArrayRC.h"
 
 using namespace std;
 
@@ -15,6 +16,12 @@ int main()
 
     // elementType -> char
     Array<char> ca(array_size);
+
+    // ArrayRC
+    ArrayRC<int> ia_rc(10);
+
+    cout << "ArrayRC: " << ia_rc.size() << endl;
+    ia_rc[10] = 10;
 
     int ix;
     for (ix = 0; ix < array_size; ++ix)
